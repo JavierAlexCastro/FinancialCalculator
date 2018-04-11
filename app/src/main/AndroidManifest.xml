@@ -16,7 +16,7 @@
             </intent-filter>
         </activity>
         <activity android:name=".CalculatorActivity" />
-        <activity android:name=".AboutActivity"></activity>
+        <activity android:name=".AboutActivity" />
     </application>
 
 </manifest>
