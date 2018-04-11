@@ -15,7 +15,7 @@
         android:paddingRight="@dimen/activity_horizontal_margin"
         android:paddingTop="@dimen/activity_vertical_margin"
         android:background="@drawable/background"
-        tools:context="javiercastro.financialcalculator.CalculatorActivity">
+        tools:context="javiercastro.financialcalculator.InputActivity">
 
         <TextView
             android:layout_width="wrap_content"

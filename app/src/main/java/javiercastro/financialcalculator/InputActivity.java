@@ -13,13 +13,13 @@ import android.widget.Button;
 import android.widget.DatePicker;
 import android.widget.TextView;
 
-public class CalculatorActivity extends AppCompatActivity
+public class InputActivity extends AppCompatActivity
         implements DatePickerDialog.OnDateSetListener  {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_calculator);
+        setContentView(R.layout.activity_input);
 
         Button continue_btn = (Button)findViewById(R.id.button_continue);
 

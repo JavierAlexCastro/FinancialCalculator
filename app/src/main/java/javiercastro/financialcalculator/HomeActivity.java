@@ -19,7 +19,7 @@ public class HomeActivity extends AppCompatActivity {
         start_btn.setOnClickListener(new View.OnClickListener()
         {
             public void onClick(View v) {
-                Intent calculator = new Intent(HomeActivity.this, CalculatorActivity.class);
+                Intent calculator = new Intent(HomeActivity.this, InputActivity.class);
                 startActivity(calculator);
 
             }
