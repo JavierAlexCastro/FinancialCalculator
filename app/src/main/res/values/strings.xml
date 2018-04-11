@@ -3,4 +3,11 @@
     <string name="title_activity_schedule">ScheduleActivity</string>
     <string name="action_settings">Settings</string>
     <string name="section_format">Hello World from section: %1$d</string>
+    <string name="about_title">About</string>
+    <string name="about_body">This app was developed by team NoSleep as one of the requirements for their CSE 4344 Software Project Management class. No further development is planned. Use at your own risk.</string>
+    <string name="input_title">Fill in the following:</string>
+    <string name="input_loan">Loan amount ($)</string>
+    <string name="input_interest">Interest rate (%)</string>
+    <string name="input_term">Payment period (months)</string>
+    <string name="input_date">Start date</string>
 </resources>

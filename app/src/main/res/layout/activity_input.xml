@@ -7,9 +7,9 @@
     android:fillViewport="true">
     <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:tools="http://schemas.android.com/tools"
-        android:id="@+id/activity_calculator"
+        android:id="@+id/activity_input"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
         android:paddingBottom="@dimen/activity_vertical_margin"
         android:paddingLeft="@dimen/activity_horizontal_margin"
         android:paddingRight="@dimen/activity_horizontal_margin"
@@ -20,12 +20,25 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:id="@+id/input_title"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="40dp"
+            android:textSize="40sp"
+            android:textStyle="bold"
+            android:textColor="@color/white"
+            android:text="@string/input_title"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:id="@+id/text_amount"
-            android:text="Enter loan amount ($)"
+            android:text="@string/input_loan"
             android:textColor="@color/white"
             android:layout_centerHorizontal="true"
             android:textSize="25sp"
-            android:layout_marginTop="60dp" />
+            android:layout_below="@+id/input_title"
+            android:layout_marginTop="50dp"
+            android:textStyle="bold"/>
 
         <EditText
             android:layout_width="180dp"
@@ -39,7 +52,6 @@
             android:background="@drawable/green_bg2"
             android:textSize="25sp"
             android:textColor="@color/white"
-            android:textStyle="bold"
             android:inputType="numberDecimal"
             android:textAlignment="center"/>
 
@@ -47,12 +59,13 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/text_interest"
-            android:text="Enter interest rate (%)"
+            android:text="@string/input_interest"
             android:textColor="@color/white"
             android:layout_centerHorizontal="true"
             android:textSize="25sp"
             android:layout_below="@+id/input_amount"
-            android:layout_marginTop="30dp" />
+            android:layout_marginTop="30dp"
+            android:textStyle="bold"/>
 
         <EditText
             android:layout_width="105dp"
@@ -66,22 +79,20 @@
             android:paddingEnd="10dp"
             android:paddingStart="10dp"
             android:textColor="@color/white"
-            android:textStyle="bold"
             android:inputType="numberDecimal"
             android:textAlignment="center"/>
-
-
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/text_period"
-            android:text="Enter payment period (months)"
+            android:text="@string/input_term"
             android:layout_centerHorizontal="true"
             android:textColor="@color/white"
             android:textSize="25sp"
             android:layout_below="@+id/input_interest"
-            android:layout_marginTop="30dp" />
+            android:layout_marginTop="30dp"
+            android:textStyle="bold"/>
 
         <EditText
             android:layout_width="100dp"
@@ -92,7 +103,6 @@
             android:layout_marginTop="15dp"
             android:background="@drawable/green_bg2"
             android:textSize="25sp"
-            android:textStyle="bold"
             android:textColor="@color/white"
             android:inputType="number"
             android:textAlignment="center"/>
@@ -101,17 +111,16 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/text_date"
-            android:text="Enter start date (mm/dd/yyyy)"
+            android:text="@string/input_date"
             android:layout_centerHorizontal="true"
             android:textColor="@color/white"
             android:textSize="25sp"
             android:layout_below="@+id/input_period"
-            android:layout_marginTop="30dp" />
-
-
+            android:layout_marginTop="30dp"
+            android:textStyle="bold"/>
 
         <TextView
-            android:layout_width="160dp"
+            android:layout_width="180dp"
             android:layout_height="45dp"
             android:id="@+id/input_date_d"
             android:layout_below="@id/text_date"
@@ -122,8 +131,6 @@
             android:background="@drawable/green_bg2"
             android:textSize="25sp"
             android:textColor="@color/white"
-            android:textStyle="bold"
-            android:inputType="number"
             android:textAlignment="center"/>
 
         <Button
@@ -132,7 +139,7 @@
             android:layout_centerHorizontal="true"
             android:id="@+id/button_date"
             android:layout_below="@+id/input_date_d"
-            android:layout_marginTop="20dp"
+            android:layout_marginTop="35dp"
             android:layout_marginBottom="20dp"
             android:background="@drawable/date_button_effect"
             android:onClick="datePicker"/>
