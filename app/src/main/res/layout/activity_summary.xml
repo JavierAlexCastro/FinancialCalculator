@@ -42,7 +42,7 @@
             android:textStyle="bold" />
 
         <EditText
-            android:id="@+id/out_monthlyAmount"
+            android:id="@+id/text_loanAmount"
             android:layout_width="180dp"
             android:layout_height="45dp"
             android:layout_below="@id/text_amount"
@@ -60,7 +60,7 @@
             android:id="@+id/text_interest"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/out_monthlyAmount"
+            android:layout_below="@+id/text_loanAmount"
             android:layout_centerHorizontal="true"
             android:layout_marginTop="30dp"
             android:text="@string/interestamount"

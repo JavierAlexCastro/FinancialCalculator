@@ -43,7 +43,7 @@
         <EditText
             android:layout_width="180dp"
             android:layout_height="45dp"
-            android:id="@+id/out_monthlyAmount"
+            android:id="@+id/text_loanAmount"
             android:layout_below="@id/text_amount"
             android:layout_centerHorizontal="true"
             android:layout_marginTop="15dp"
@@ -63,7 +63,7 @@
             android:textColor="@color/white"
             android:layout_centerHorizontal="true"
             android:textSize="25sp"
-            android:layout_below="@+id/out_monthlyAmount"
+            android:layout_below="@+id/text_loanAmount"
             android:layout_marginTop="30dp"
             android:textStyle="bold"/>
 
@@ -137,7 +137,7 @@
             android:layout_width="wrap_content"
             android:layout_height="100dp"
             android:layout_centerHorizontal="true"
-            android:id="@+id/button_schedule"
+            android:id="@+id/button_selectDate"
             android:layout_below="@+id/input_date_d"
             android:layout_marginTop="35dp"
             android:layout_marginBottom="20dp"
@@ -149,7 +149,7 @@
             android:layout_height="100dp"
             android:layout_centerHorizontal="true"
             android:id="@+id/button_continue"
-            android:layout_below="@+id/button_schedule"
+            android:layout_below="@+id/button_selectDate"
             android:background="@drawable/continue_button_effect"
           />
 
