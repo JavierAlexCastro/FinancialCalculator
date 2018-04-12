@@ -4,6 +4,7 @@ import android.app.Activity;
 import android.app.DatePickerDialog;
 import android.app.Dialog;
 import android.content.Context;
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.icu.text.DateFormat;
 import android.icu.util.Calendar;
@@ -48,6 +49,9 @@ public class InputActivity extends AppCompatActivity
                 editor.putFloat("INTEREST", interest);
                 editor.putInt("PERIOD", period);
                 editor.apply();
+
+                Intent summary = new Intent(InputActivity.this, SummaryActivity.class);
+                startActivity(summary);
             }
         });
     }

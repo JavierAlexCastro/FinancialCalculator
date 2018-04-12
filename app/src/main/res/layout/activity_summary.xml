@@ -41,7 +41,7 @@
             android:textSize="25sp"
             android:textStyle="bold" />
 
-        <EditText
+        <TextView
             android:id="@+id/text_loanAmount"
             android:layout_width="180dp"
             android:layout_height="45dp"
@@ -81,7 +81,7 @@
             android:textSize="25sp"
             android:textStyle="bold" />
 
-        <EditText
+        <TextView
             android:id="@+id/out_interest"
             android:layout_width="105dp"
             android:layout_height="45dp"
@@ -95,13 +95,12 @@
             android:textAlignment="center"
             android:textColor="@color/white"
             android:textSize="25sp" />
-        <EditText
+        <TextView
             android:id="@+id/out_payOffDate2"
             android:layout_below="@id/text_payoffdate"
             android:layout_width="233dp"
             android:layout_height="47dp"
             android:layout_centerHorizontal="true"
-            android:layout_marginBottom="435dp"
             android:background="@drawable/green_bg2"
             android:inputType="numberDecimal"
             android:paddingEnd="10dp"
@@ -114,11 +113,9 @@
             android:id="@+id/button"
             android:layout_width="107dp"
             android:layout_height="78dp"
-            android:layout_alignParentBottom="false"
             android:layout_below="@id/out_payOffDate2"
             android:layout_centerHorizontal="true"
-            android:layout_marginBottom="361dp"
-            android:text="@string/schedule" />
+            android:text="@string/schedule"/>
 
     </RelativeLayout>
     </ScrollView>
