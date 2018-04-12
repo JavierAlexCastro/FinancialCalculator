@@ -149,3 +149,4 @@ public class InputActivity extends AppCompatActivity
                 activity.getCurrentFocus().getWindowToken(), 0);
     }
 }
+

@@ -20,6 +20,7 @@
         <activity
             android:name=".SummaryActivity"
             android:label="@string/title_activity_summary"></activity>
+        <activity android:name=".ScheduleActivity"></activity>
     </application>
 
 </manifest>
