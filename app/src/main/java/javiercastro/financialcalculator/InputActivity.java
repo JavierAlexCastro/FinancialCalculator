@@ -3,6 +3,8 @@ package javiercastro.financialcalculator;
 import android.app.Activity;
 import android.app.DatePickerDialog;
 import android.app.Dialog;
+import android.content.Context;
+import android.content.SharedPreferences;
 import android.icu.text.DateFormat;
 import android.icu.util.Calendar;
 import android.icu.util.GregorianCalendar;
@@ -30,12 +32,22 @@ public class InputActivity extends AppCompatActivity
         setupUI(findViewById(R.id.activity_input));
 
         Button continue_btn = (Button)findViewById(R.id.button_continue);
+        final EditText e_loan = (EditText)findViewById(R.id.input_amount);
+        final EditText e_interest = (EditText)findViewById(R.id.input_interest);
+        final EditText e_period = (EditText)findViewById(R.id.input_period);
 
         continue_btn.setOnClickListener(new View.OnClickListener()
         {
             public void onClick(View v) {
-                //launch new activity
-
+                Float amount = Float.valueOf(e_loan.getText().toString());
+                Float interest = Float.valueOf(e_interest.getText().toString());
+                Integer period = Integer.valueOf(e_period.getText().toString());
+                SharedPreferences settings = getSharedPreferences("PREFS_NAME", Context.MODE_PRIVATE);
+                SharedPreferences.Editor editor = settings.edit();
+                editor.putFloat("LOAN", amount);
+                editor.putFloat("INTEREST", interest);
+                editor.putInt("PERIOD", period);
+                editor.apply();
             }
         });
     }
@@ -72,6 +84,12 @@ public class InputActivity extends AppCompatActivity
     @Override
     public void onDateSet(DatePicker view, int year, int month, int day) {
         Calendar cal = new GregorianCalendar(year, month, day);
+        SharedPreferences settings = getSharedPreferences("PREFS_NAME", Context.MODE_PRIVATE);
+        SharedPreferences.Editor editor = settings.edit();
+        editor.putInt("DAY", day);
+        editor.putInt("MONTH",month);
+        editor.putInt("YEAR", year);
+        editor.apply();
         Log.d("Year: ", Integer.toString(year));
         Log.d("Month: ", Integer.toString(month));
         Log.d("Day: ", Integer.toString(day));
