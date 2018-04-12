@@ -9,6 +9,7 @@ import android.icu.util.GregorianCalendar;
 import android.support.v4.app.DialogFragment;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
@@ -56,7 +57,6 @@ public class InputActivity extends AppCompatActivity
      */
     private void setDate(final Calendar calendar) {
         final DateFormat dateFormat = DateFormat.getDateInstance(DateFormat.MEDIUM);
-
         ((TextView) findViewById(R.id.input_date_d))
                 .setText(dateFormat.format(calendar.getTime()));
 
@@ -72,6 +72,9 @@ public class InputActivity extends AppCompatActivity
     @Override
     public void onDateSet(DatePicker view, int year, int month, int day) {
         Calendar cal = new GregorianCalendar(year, month, day);
+        Log.d("Year: ", Integer.toString(year));
+        Log.d("Month: ", Integer.toString(month));
+        Log.d("Day: ", Integer.toString(day));
         setDate(cal);
     }
 
@@ -87,6 +90,9 @@ public class InputActivity extends AppCompatActivity
             int year = c.get(Calendar.YEAR);
             int month = c.get(Calendar.MONTH);
             int day = c.get(Calendar.DAY_OF_MONTH);
+            //Log.d("Year: ", Integer.toString(year));
+            //Log.d("Month: ", Integer.toString(month));
+            //Log.d("Day: ", Integer.toString(day));
 
 
             return new DatePickerDialog(getActivity(),
