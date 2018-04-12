@@ -10,4 +10,11 @@
     <string name="input_interest">Interest rate (%)</string>
     <string name="input_term">Payment period (months)</string>
     <string name="input_date">Start date</string>
+    <string name="title_activity_summary">SummaryActivity</string>
+    <string name="summary">Summary</string>
+    <string name="monthlyPayment">Monthly Payment</string>
+    <string name="total">Total</string>
+    <string name="interestamount">Interest</string>
+    <string name="payoff">Payoff Date</string>
+    <string name="schedule">Schedule</string>
 </resources>

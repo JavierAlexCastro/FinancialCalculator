@@ -34,4 +34,15 @@
         android:textSize="30sp"
         android:layout_marginTop="55dp"/>
 
+    <EditText
+        android:id="@+id/editText"
+        android:layout_width="244dp"
+        android:layout_height="265dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="129dp"
+        android:ems="10"
+        android:inputType="textMultiLine"
+        android:textAppearance="@style/TextAppearance.AppCompat" />
+
 </RelativeLayout>

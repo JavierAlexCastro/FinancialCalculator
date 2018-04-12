@@ -15,4 +15,6 @@
         <item name="android:windowContentOverlay">@null</item>
     </style>
 
+    <style name="schedule">Schedule</style>
+
 </resources>
