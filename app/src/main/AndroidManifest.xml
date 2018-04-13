@@ -18,9 +18,8 @@
         <activity android:name=".InputActivity" />
         <activity android:name=".AboutActivity" />
         <activity
-            android:name=".SummaryActivity"
-            android:label="@string/title_activity_summary"></activity>
-        <activity android:name=".ScheduleActivity"></activity>
+            android:name=".SummaryActivity"/>
+        <activity android:name=".ScheduleActivity"/>
     </application>
 
 </manifest>
