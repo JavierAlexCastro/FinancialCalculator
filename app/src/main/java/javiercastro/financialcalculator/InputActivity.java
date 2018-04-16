@@ -21,6 +21,7 @@ import android.widget.Button;
 import android.widget.DatePicker;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class InputActivity extends AppCompatActivity
         implements DatePickerDialog.OnDateSetListener  {
@@ -36,22 +37,29 @@ public class InputActivity extends AppCompatActivity
         final EditText e_loan = (EditText)findViewById(R.id.input_amount);
         final EditText e_interest = (EditText)findViewById(R.id.input_interest);
         final EditText e_period = (EditText)findViewById(R.id.input_period);
+        final TextView t_date = (TextView)findViewById(R.id.input_date_d);
 
         continue_btn.setOnClickListener(new View.OnClickListener()
         {
             public void onClick(View v) {
-                Float amount = Float.valueOf(e_loan.getText().toString());
-                Float interest = Float.valueOf(e_interest.getText().toString());
-                Integer period = Integer.valueOf(e_period.getText().toString());
-                SharedPreferences settings = getSharedPreferences("PREFS_NAME", Context.MODE_PRIVATE);
-                SharedPreferences.Editor editor = settings.edit();
-                editor.putFloat("LOAN", amount);
-                editor.putFloat("INTEREST", interest);
-                editor.putInt("PERIOD", period);
-                editor.apply();
+                if(e_loan.getText().toString().matches("") || e_interest.getText().toString().matches("") || e_period.getText().toString().matches("") || t_date.getText().toString().matches("")){
+                    Toast.makeText(getApplicationContext(), "Field(s) cannot be empty!", Toast.LENGTH_SHORT).show();
+                }else if(Double.parseDouble(e_loan.getText().toString())>9999999.99){
+                    Toast.makeText(getApplicationContext(), "Loan needs to be < 10,000,000", Toast.LENGTH_LONG).show();
+                }else{
+                    Float amount = Float.valueOf(e_loan.getText().toString());
+                    Float interest = Float.valueOf(e_interest.getText().toString());
+                    Integer period = Integer.valueOf(e_period.getText().toString());
+                    SharedPreferences settings = getSharedPreferences("PREFS_NAME", Context.MODE_PRIVATE);
+                    SharedPreferences.Editor editor = settings.edit();
+                    editor.putFloat("LOAN", amount);
+                    editor.putFloat("INTEREST", interest);
+                    editor.putInt("PERIOD", period);
+                    editor.apply();
 
-                Intent summary = new Intent(InputActivity.this, SummaryActivity.class);
-                startActivity(summary);
+                    Intent summary = new Intent(InputActivity.this, SummaryActivity.class);
+                    startActivity(summary);
+                }
             }
         });
     }
