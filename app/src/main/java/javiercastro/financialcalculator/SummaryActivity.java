@@ -98,8 +98,11 @@ public class SummaryActivity extends Activity {
         button.setOnClickListener(new View.OnClickListener()
         {
             public void onClick(View v) {
-                Intent schedule = new Intent(SummaryActivity.this, ScheduleActivity.class);
-                startActivity(schedule);
+                //Intent schedule = new Intent(SummaryActivity.this, ScheduleActivity.class);
+                //startActivity(schedule);
+
+                Intent table = new Intent(SummaryActivity.this, TableActivity.class);
+                startActivity(table);
             }
         });
     }

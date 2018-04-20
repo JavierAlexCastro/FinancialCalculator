@@ -162,6 +162,10 @@ public class ScheduleActivity extends AppCompatActivity {
                 textView1.setTextColor(getResources().getColor(R.color.white));
                 textView2.setTextColor(getResources().getColor(R.color.white));
                 textView3.setTextColor(getResources().getColor(R.color.white));
+                textView.setTypeface(textView.getTypeface(), Typeface.BOLD);
+                textView1.setTypeface(textView1.getTypeface(), Typeface.BOLD);
+                textView2.setTypeface(textView2.getTypeface(), Typeface.BOLD);
+                textView3.setTypeface(textView2.getTypeface(), Typeface.BOLD);
 
                 int curTextViewId = prevTextViewId + 1;
                 int curTextViewId1 = prevTextViewId1 + 1;

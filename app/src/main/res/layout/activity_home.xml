@@ -1,37 +1,52 @@
 <?xml version="1.0" encoding="utf-8"?>
+
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/activity_home"
+    android:id="@+id/activity_home_outer"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-
     android:background="@drawable/background"
-    tools:context="javiercastro.financialcalculator.HomeActivity">
+    tools:context="javiercastro.financialcalculator.ScheduleActivity">
 
-    <ImageView
-        android:layout_width="350dp"
-        android:layout_height="wrap_content"
-        android:src="@drawable/name"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="50dp"
-        android:id="@+id/name"/>
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="100dp"
-        android:id="@+id/start_btn"
-        android:background="@drawable/start_button_effect"
-        android:layout_below="@+id/name"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentEnd="true"
-        android:layout_marginTop="60dp"/>
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="100dp"
-        android:id="@+id/about_btn"
-        android:background="@drawable/about_button_effect"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentStart="true"
-        android:layout_below="@+id/start_btn"
-        android:layout_marginTop="30sp"/>
+    <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:fillViewport="true">
 
+        <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:tools="http://schemas.android.com/tools"
+            android:id="@+id/activity_home"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            tools:context="javiercastro.financialcalculator.HomeActivity">
+
+            <ImageView
+                android:layout_width="350dp"
+                android:layout_height="wrap_content"
+                android:src="@drawable/name"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="50dp"
+                android:id="@+id/name"/>
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="100dp"
+                android:id="@+id/start_btn"
+                android:background="@drawable/start_button_effect"
+                android:layout_below="@+id/name"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentEnd="true"
+                android:layout_marginTop="60dp"/>
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="100dp"
+                android:id="@+id/about_btn"
+                android:background="@drawable/about_button_effect"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/start_btn"
+                android:layout_marginTop="30dp"
+                android:layout_marginBottom="40dp"/>
+        </RelativeLayout>
+    </ScrollView>
 </RelativeLayout>
